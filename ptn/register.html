@@ -1,0 +1,28 @@
+<script type="text/javascript" src="./assets/js/vehicle/register.js"></script>   
+<div class="form-signin">
+    <h2 class="form-signin-heading">Create a New User</h2>
+    <form method="POST" name="register" action="register.php" id="register" onSubmit="return registerCheck();" class="form-signin">                    
+        <input type="hidden" name="frmToken" value="{{frmToken}}" />
+        <div class="text-danger" data-dismiss="alert-dangerd" id="emailResult">
+            <strong>{{errorMsg}}</strong>
+        </div>
+        <div class="form-group">
+            <label for="userEmail">Email Id</label>                
+            <input type="email" name="userEmail" class="form-control" id="userEmail" placeholder="Email&#x20;Id" value="{{userEmail}}">
+            <span id="emailLoad"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="userPass1">Create a Password</label>
+            <input type="password" name="userPass1" class="form-control" placeholder="Password" value="">
+        </div>
+
+        <div class="form-group">
+            <label for="userPass2">Confirm a Password</label>
+            <input type="password" name="userPass2" class="form-control" placeholder="Password" value="">
+        </div>
+        <div class="text-center">
+            <input type="submit" name="submit" class="btn btn-primary" value="Create New User">
+        </div>
+    </form>        
+</div>

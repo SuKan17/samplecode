@@ -1,0 +1,14 @@
+<script src="./assets/js/vehicle/login.js"></script>
+<form class="form-signin" name="login" method="post" onsubmit="return loginCheck();" action="index.php">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <div class="text-danger" data-dismiss="alert-dangerd" id="emailResult">
+        <strong>{{errorMsg}}</strong>
+    </div>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" name="userEmail" id="userEmail" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name="userPass" id="userPass" class="form-control" placeholder="Password" required>
+    <input class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="Sign In">
+</form>
+<div class="span12 text-center">email id : <b>behappy@thanks.com</b></div>
+<div class="span12 text-center">password : <b>welcome$17</b></div>

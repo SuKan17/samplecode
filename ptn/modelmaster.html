@@ -1,0 +1,53 @@
+<script type="text/javascript">
+    $(function () {
+        $("#brand").change(function () {
+            var bd = $(this).val();
+            if (bd != '') {
+                location.href = "modelmaster.php?bd=" + bd;
+            }
+        });
+    });
+</script>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Model Master</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="text-info">{{Message}}</div>
+        <div class="text-left">
+            <select name="brand" id="brand">{{BrandList}}</select>
+        </div>
+        <div class="text-right">
+            <a href="updmodelmaster.php?upd=1&bd={{bd}}" type="button" class="btn btn-primary">Add New</a>
+        </div>
+        <div class="table-responsive panel-body">
+            <table border="0" align=center width="100%" cellspacing="2" cellpadding="3" class="table table-hover table-bordered">
+                <thead>
+                    <tr class="thbar">
+                        <th>SlNo</th>
+                        <th>Brand Name</th>
+                        <th>Model Name</th>
+                        <th>Status</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <{Begin}>
+                <tr>
+                    <td align="center">{{slno}}</td>
+                    <td align="left">{{brandName}}</td>
+                    <td align="left">{{modelName}}</td>
+                    <td align="center">
+                        <a href="modelmaster.php?id={{idvalue}}&bd={{bd}}&status={{activeStatus}}" title="{{StatusTitle}}" class="{{DisplayStatus}}">{{StatusTitle}}</a></td>
+                    <td align="center">{{DisplayEditLink}}</td>
+                    <td align="center">
+                        <a href='modelmaster.php?status=3&id={{idvalue}}&bd={{bd}}' onclick='return confirm(\"Are you sure to Delete?\");' title='Delete' class='btn btn-info'>Delete</a>
+                    </td>
+                </tr>
+                <{End}>
+            </table>
+        </div>
+    </div>
+</div>

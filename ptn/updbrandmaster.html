@@ -1,0 +1,31 @@
+<script type="text/javascript" src="./assets/js/vehicle/brandmaster.js" ></script>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Brand Management - {{UpdateText}} Brand</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="text-info">{{Message}}</div>
+        <form  name="brandmaster" method="post" action="updbrandmaster.php" onSubmit="return brandCheck();" class="form-horizontal">
+            <input type="hidden" name="upd" value="{{upd}}">
+            <input type="hidden" name="idval" value="{{id}}">
+            <input type="hidden" name="frameToken" value="{{frameToken}}" />
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="bradName">Brand Name<font color="red">&nbsp;*</font></label>
+                <div class="col-sm-10">
+                    <input type="text" name="brandName" id="brandName" class="form-control" value="{{brandName}}">
+                </div>
+            </div>
+            <div class="form-group">
+            </div>
+            <div class="form-group">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success" name="submit" value="Submit">
+                        Save</button>
+                    <a href="#" onclick="cancel();" class ="btn btn-info">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

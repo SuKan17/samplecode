@@ -1,0 +1,92 @@
+<script type="text/javascript" src="./assets/js/vehicle/productedit.js"></script>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Product Management - Edit & View Product</h3>
+    </div>
+    <div class="panel-body">
+        <div class="text-info text-center">{{Message}}</div>
+        <form  name="product" method="post" action="productedit.php" onSubmit="return productCheck();" class="form-horizontal" enctype="multipart/form-data">
+            <input type="hidden" name="idval" value="{{id}}">
+            <input type="hidden" name="page" id="page" value="{{page}}">
+            <input type="hidden" name="frameToken" value="{{frameToken}}">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="productName">Product Name<font color="red">&nbsp;*</font></label>
+                <div class="col-sm-10">
+                    <input type="text" name="productName" id="productName" class="form-control" value="{{productName}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="productPrice">Product Price<font color="red">&nbsp;*</font></label>
+                <div class="col-sm-10">
+                    <input type="text" name="productPrice" id="productPrice" class="form-control" value="{{productPrice}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="availableStockQty">Stock Quantity<font color="red">&nbsp;*</font></label>
+                <div class="col-sm-10">
+                    <input type="text" name="availableStockQty" id="availableStockQty" class="form-control" value="{{availableStockQty}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="brandId">Brand Name</label>
+                <div class="col-sm-10">
+                    <select id="brandId" name="brandId" class="form-control">
+                        {{BrandList}}
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="modelId">Model Name</label>
+                <div class="col-sm-10">
+                    <select id="modelId" name="modelId" class="form-control">
+                        {{ModelList}}
+                    </select>
+                    <span class="modelLoad"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="categoryId">Category Name</label>
+                <div class="col-sm-10">
+                    <select id="categoryId" name="categoryId" class="form-control">
+                        {{CategoryList}}
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="productDescription">Product Description<font color="red">&nbsp;*</font></label>
+                <div class="col-sm-10">
+                    <textarea rows="4" cols="35" name="productDescription" id="productDescription" class="form-control">{{productDescription}}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="productImageName">Product Image</label>
+                <div class="col-sm-10">
+                    <input type="file" name="productImageName" id="catImageName" class="form-control">
+                    (jpg, gif and png files are supported. Otherwise files are rejected)
+                    {{DisplayImage}}
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="metaKeyword">Meta Keyword</label>
+                <div class="col-sm-10">
+                    <input type="text" name="metaKeyword" id="metaKeyword" class="form-control" value="{{metaKeyword}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="metaDescription">Meta Description</label>
+                <div class="col-sm-10">
+                    <input type="text" name="metaDescription" id="metaDescription" class="form-control" value="{{metaDescription}}">
+                </div>
+            </div>
+            <div class="form-group">
+            </div>
+            <div class="form-group">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success" name="submit" value="Submit">
+                        Submit</button>
+                    <a href="#" onclick="cancel();" class ="btn btn-info">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

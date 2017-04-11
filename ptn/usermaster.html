@@ -1,0 +1,32 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">User Management</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="text-info">{{Message}}</div>
+        <div class="text-right">
+            <a href="register.php" class="btn btn-primary">Add New</a>
+        </div>
+        <div class="table-responsive panel-body">
+            <table border="0" align=center width="100%" cellspacing="2" cellpadding="3" class="table table-hover table-bordered">
+                <thead>
+                    <tr class="thbar">
+                        <th>Sl No</th>
+                        <th>User Email Id</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <{Begin}>
+                <tr>
+                    <td align="center">{{slno}}</td>
+                    <td align="left">{{userEmail}}</td>
+                    <td align="center">
+                        <a href="usermaster.php?id={{idvalue}}&status={{userStatus}}" title="{{StatusTitle}}" class="{{DisplayStatus}}">{{StatusTitle}}</a>
+                    </td>
+                </tr>
+                <{End}>
+            </table>
+        </div>
+    </div>
+</div>

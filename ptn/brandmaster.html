@@ -1,0 +1,37 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Brand Master</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="text-info">{{Message}}</div>
+        <div class="text-right">
+            <a href="updbrandmaster.php?upd=1" type="button" class="btn btn-primary">Add New</a>
+        </div>
+        <div class="table-responsive panel-body">
+            <table border="0" align=center width="100%" cellspacing="2" cellpadding="3" class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>SlNo</th>
+                        <th>Brand Name</th>
+                        <th>Status</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <{Begin}>
+                <tr>
+                    <td align="center">{{slno}}</td>
+                    <td align="left">{{brandName}}</td>
+                    <td align="center">
+                        <a href="brandmaster.php?id={{idvalue}}&status={{activeStatus}}" title="{{StatusTitle}}" class="{{DisplayStatus}}">{{StatusTitle}}</a></td>
+                    <td align="center">{{DisplayEditLink}}</td>
+                    <td align="center">
+                        <a href='brandmaster.php?status=3&id={{idvalue}}' onclick='return confirm(\"Are you sure to Delete?\");' title='Delete' class='btn btn-info'>Delete</a>
+                    </td>
+                </tr>
+                <{End}>
+            </table>
+        </div>
+    </div>
+</div>
